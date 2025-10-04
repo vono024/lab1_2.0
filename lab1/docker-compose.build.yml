@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    image: lab1-php:latest
+    container_name: lab1_php_build
+
+  nginx:
+    image: nginx:alpine
+    container_name: lab1_nginx_build
